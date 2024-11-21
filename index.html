@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="dados.html" method="get">
+    <!-- <label for="campo1">Digite seu nome</label> -->
+    <!-- label tag identificadora -->
+    <!-- o for referencia de onde pertence -->
+    <input type="number" id="campo1" placeholder="Digite um numero" name="primeiroNumero">
+    <br>
+    <!-- <label for="campo2">Digite seu nome</label> -->
+    <!-- o for referencia de onde pertence -->
+    <input type="number" id="campo2" placeholder="Digite outro numero" name="segundoNumero">
+    <!-- value apropria um valor fixo, aqui fixamos o valor 100 como fixo , e desativado o modo digitável -->
+    <br><br>
+    <input type="number" id="campo3" placeholder="Resultado" disabled name="Resultado">
+    <!-- readonly -> ele tira o campo digitável, apenas leituras -->
+    <!-- disabled ele desativa -->
+    <!-- o placeholder identificação visual -->
+        <!-- <textarea name="" id="" rows="4" cols="10" placeholder="digite sua mensagem"></textarea> -->
+    <!-- rows = visualização de números de linhas -->
+    <!-- cols - visualização de colunas  -->
+    <!-- placeholders - visualização o que vc deseja, quer que esteja escrito -->
+    <input type="submit">
+    </form>
+
+    <hr>
+    <button onclick="javascript:teste()">click aqui </button>
+    <!-- o nome click é o nome predefinido que esta dando conflito -->
+</body>
+<script>
+    function teste(){
+        const campo1 = document.getElementById("campo1")
+        const campo2 = document.getElementById("campo2")
+        const campo3 = document.getElementById("campo3")
+
+        campo3.value = parseInt(campo1.value) + parseInt(campo2.value)
+        //campo1.value = "pink"
+        console.log(campo3.value)
+        //elemento campo1 dentro do tem uma propriedade value
+    }
+</script>
+</html>
